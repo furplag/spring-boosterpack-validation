@@ -13,14 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jp.furplag.spring.booster.validation;
+package jp.furplag.spring.booster.validation.tuple;
 
-import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
-import org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator;
+import java.util.Objects;
 
-public class ValidationMessageInterpolator extends LocaleContextMessageInterpolator {
+import org.apache.commons.lang3.math.NumberUtils;
 
-  public ValidationMessageInterpolator() {
-    super(new ResourceBundleMessageInterpolator());
+public class PairIntegers extends PairNumbers<Long> {
+
+  public PairIntegers(Long left, Long right) {
+    super(left, right);
+  }
+
+  public PairIntegers(Object left, Object right) {
+    this((Long) (isInteger(left) ? NumberUtils.createLong(Objects.toString(left, null)) : null), (Long) (isInteger(right) ? NumberUtils.createLong(Objects.toString(right, null)) : null));
+  }
+
+  @Override
+  public boolean isEquals() {
+    return isPresents() && left.compareTo(right) == 0;
   }
 }

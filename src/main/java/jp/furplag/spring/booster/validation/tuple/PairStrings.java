@@ -13,14 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jp.furplag.spring.booster.validation;
+package jp.furplag.spring.booster.validation.tuple;
 
-import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
-import org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator;
+import java.util.Objects;
 
-public class ValidationMessageInterpolator extends LocaleContextMessageInterpolator {
+import jp.furplag.util.commons.StringUtils;
 
-  public ValidationMessageInterpolator() {
-    super(new ResourceBundleMessageInterpolator());
+public class PairStrings extends StrictPair<String> {
+
+  public PairStrings(String left, String right) {
+    super(StringUtils.trim(left, true), StringUtils.trim(right, true));
+  }
+
+  public PairStrings(Object left, Object right) {
+    this((String) Objects.toString(left, null), Objects.toString(right, null));
+  }
+
+  @Override
+  public boolean isCollect() {
+    return isEquals() && !"".equals(left);
   }
 }
