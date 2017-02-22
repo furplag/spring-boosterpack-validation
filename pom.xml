@@ -52,6 +52,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <spring.boot.starter.version>1.5.1.RELEASE</spring.boot.starter.version>
+    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
+    <github.global.server>github</github.global.server>
   </properties>
 
   <dependencies>
