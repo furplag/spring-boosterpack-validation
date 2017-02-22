@@ -1,4 +1,5 @@
 # spring-boosterpack-validation
+[![Build Status](https://travis-ci.org/furplag/spring-boosterpack-validation.svg?branch=master)](https://travis-ci.org/furplag/spring-boosterpack-validation)
 
 
 several function for Spring Boot beans validation.
