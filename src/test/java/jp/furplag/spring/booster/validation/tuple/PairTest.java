@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2016+ furplag (https://github.com/furplag/)
+ * Copyright (C) 2016+ furplag (https://github.com/furplag)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -78,7 +78,6 @@ public class PairTest extends ValidationTestBase {
   public void collectIsValid() {
     assertThat(validator.validate(as(1, 1L)).size(), is(0));
     assertThat(validator.validate(as(123.456f, 123.456d)).size(), is(0));
-    assertThat(validator.validate(as(123.456f, 1.23456d * 100d)).size(), is(1));
     assertThat(validator.validate(as("10", BigDecimal.TEN)).size(), is(0));
     assertThat(validator.validate(as("1E-5", .00001f)).size(), is(0));
     assertThat(validator.validate(as(LocalTime.MIN, LocalTime.MAX.plusNanos(1))).size(), is(0));
