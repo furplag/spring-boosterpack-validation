@@ -23,16 +23,15 @@
   <groupId>jp.furplag.spring.boot.starter</groupId>
   <artifactId>spring-boosterpack-validation</artifactId>
   <name>${project.artifactId}</name>
-  <version>1.5.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>several function for Spring Boot beans validation.</description>
   <inceptionYear>2016</inceptionYear>
   <url>https://github.com/furplag/${project.name}</url>
 
   <parent>
-    <groupId>jp.furplag.sandbox</groupId>
-    <artifactId>dependency-management</artifactId>
-    <version>1.0.0</version>
+    <groupId>jp.furplag.spring.boot</groupId>
+    <artifactId>spring-boosterpack-parent</artifactId>
+    <version>1.5.2.RELEASE</version>
     <relativePath />
   </parent>
 
