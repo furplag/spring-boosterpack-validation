@@ -85,14 +85,32 @@
   </dependencies>
 
   <repositories>
+
     <repository>
-      <id>jp.furplag.sandbox.dependency-management</id>
-      <url>https://raw.github.com/furplag/dependency-management/mvn-repo/</url>
+      <id>jp.furplag.sandbox.spring-boosterpack-parent</id>
+      <url>https://raw.github.com/furplag/spring-boosterpack-parent/mvn-repo/</url>
       <snapshots>
         <enabled>true</enabled>
         <updatePolicy>always</updatePolicy>
       </snapshots>
     </repository>
+    <repository>
+      <id>jp.furplag.sandbox.java.util.commons-wrap</id>
+      <url>https://raw.github.com/furplag/commons-wrap/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>jp.furplag.spring.boot.starter.spring-boosterpack-validation</id>
+      <url>https://raw.github.com/furplag/spring-boosterpack-validation/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
   </repositories>
 
   <build>
