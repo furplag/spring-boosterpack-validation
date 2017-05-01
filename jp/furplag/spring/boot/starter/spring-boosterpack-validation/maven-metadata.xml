@@ -3,9 +3,10 @@
   <groupId>jp.furplag.spring.boot.starter</groupId>
   <artifactId>spring-boosterpack-validation</artifactId>
   <versioning>
+    <release>1.5.2.RELEASE</release>
     <versions>
-      <version>1.5.1-SNAPSHOT</version>
+      <version>1.5.2.RELEASE</version>
     </versions>
-    <lastUpdated>20170224110712</lastUpdated>
+    <lastUpdated>20170501080959</lastUpdated>
   </versioning>
 </metadata>
